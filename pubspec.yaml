@@ -1,0 +1,33 @@
+name: enviroments
+description: "A new Flutter project. Created by Slidy"
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter_dotenv: ^2.1.0
+  dio: ^3.0.9
+  flutter_mobx: ^1.1.0
+  mobx: ^1.1.1
+  flutter_modular: ^1.1.2
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  mockito: ^4.1.1
+  mobx_codegen: ^1.0.3
+  build_runner: ^1.9.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env
+scripts:
+  mobx: flutter clean & flutter pub get & flutter pub run build_runner build --delete-conflicting-outputs
